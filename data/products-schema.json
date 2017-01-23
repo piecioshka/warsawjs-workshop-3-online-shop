@@ -1,0 +1,48 @@
+{
+    "id": "products",
+    "type": "object",
+    "required": [
+        "products"
+    ],
+    "properties": {
+        "products": {
+            "type": "array",
+            "minItems": 50,
+            "items": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "name",
+                    "description",
+                    "image"
+                ],
+                "properties": {
+                    "id": {
+                        "chance": {
+                            "guid": {}
+                        }
+                    },
+                    "name": {
+                        "type": "string",
+                        "faker": "commerce.product"
+                    },
+                    "description": {
+                        "chance": {
+                            "paragraph": {
+                                "sentences": 1
+                            }
+                        }
+                    },
+                    "image": {
+                        "chance": {
+                            "avatar": {
+                                "protocol": "https",
+                                "fileExtension": "jpg"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

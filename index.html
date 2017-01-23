@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WarsawJS Workshop #3 :: Shop Online</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+
+    <script src="scripts/modules/shop-module.js"></script>
+    <script src="scripts/services/products.js"></script>
+    <script src="scripts/components/page-header.js"></script>
+    <script src="scripts/components/page-footer.js"></script>
+    <script src="scripts/components/product-add-to-cart-component.js"></script>
+    <script src="scripts/components/product-component.js"></script>
+    <script src="scripts/components/product-list-component.js"></script>
+    <script src="scripts/setup.js"></script>
+</head>
+<body>
+    <section class="container">
+        <page-header></page-header>
+
+        <product-list class="row">
+            <div class="progress">
+                <div class="indeterminate"></div>
+            </div>
+        </product-list>
+
+        <page-footer></page-footer>
+    </section>
+</body>
+</html>
