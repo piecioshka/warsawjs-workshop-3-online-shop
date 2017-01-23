@@ -4,6 +4,13 @@
 
 ![](http://warsawjs.com/assets/images/logo/logo-transparent-240x240.png)
 
+## Jak uruchomić?
+
+```
+$ npm run build:mock
+$ npm run start:mock-server
+```
+
 ## Wymagania
 
 * Angular v1.6.1
