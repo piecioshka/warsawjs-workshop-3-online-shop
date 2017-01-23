@@ -93,18 +93,18 @@ $ npm run start:mock-server
 ## Przydatne linki
 
 * https://cdnjs.com/
+* https://angularjs.org/
 
 ### Mockowanie danych
 
 * http://json-schema-faker.js.org/
-* https://github.com/json-schema-faker/json-schema-faker
+* https://github.com/json-schema-faker/json-schema-faker/
 * http://chancejs.com/
 * https://github.com/marak/Faker.js/
 
 ### Angular.js
 
-* https://angularjs.org/
-* https://toddmotto.com/angular-1-6-is-here
+* https://toddmotto.com/angular-1-6-is-here (v1.6)
 * https://toddmotto.com/exploring-the-angular-1-5-component-method (v1.5)
 * https://toddmotto.com/on-init-require-object-syntax-angular-component/ (v1.5)
 * https://toddmotto.com/angular-1-5-lifecycle-hooks (v1.5 - tabs)
