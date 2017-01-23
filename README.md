@@ -14,10 +14,14 @@ $ npm run start:mock-server
 ## Wymagania
 
 * Angular v1.6.1
-* Wykorzystanie komponentów
+* Zainstalowany Node.js v7+
+* Paczki zainstalowane globalnie:
+    - `json-server`
+    - `http-server`
 
 ## O czym opowiedzieć?
 
+* Wykorzystanie komponentów zamiast dyrektyw
 * Definicja dyrektywy vs definicja komponentu
 * Każdy komponent posiada domyślnie izolowany `scope`
 * Tworzenie komponentów (skróconej wersji dyrektyw) podobnej jak w Angular 2
@@ -58,7 +62,7 @@ $ npm run start:mock-server
     - od wersji v1.5.6 nie trzeba podawać nazwy komponentu jeśli jest 
     zdefiniowany klucz
 * Typy dyrektyw: element, atrybut (pomijamy klasy i komentarze)
-* Przekazywanie parametrów do dyrektyw:
+* Przekazywanie parametrów do komponentów i dyrektyw:
     - `@` - przekazywane przez wartość w jedną stronę
     - `=` - przekazywane przez referencję dwukierunkowo
     - `&` - akcja?
@@ -66,6 +70,7 @@ $ npm run start:mock-server
 ## Proste błędy
 
 * Nazwa komponentu w definicji (*.js) wg konwencji `camelCase`
+* Odwołując się do właściwości stworzonej w kontrolerze używamy `$ctrl.PROPERTY`
 
 ## TODO LIST
 
@@ -78,6 +83,7 @@ $ npm run start:mock-server
 * Dodawanie produktów do koszyka
 * Usuwanie produktów z koszyka
 * Wyszukiwarka
+* Obsługa błędów
 
 ## Zadania dodatkowe
 
@@ -95,7 +101,7 @@ $ npm run start:mock-server
 * http://chancejs.com/
 * https://github.com/marak/Faker.js/
 
-## Angular.js
+### Angular.js
 
 * https://angularjs.org/
 * https://toddmotto.com/angular-1-6-is-here
