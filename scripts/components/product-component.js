@@ -1,10 +1,10 @@
-(function (window, document, undefined) {
+(function () {
     'use strict';
 
     class ProductComponent {
         constructor() {
             this.bindings = {
-                productId: '='
+                productIndex: '='
             };
             this.require = {
                 productList: '^^'
@@ -14,7 +14,7 @@
 
         template() {
             return `
-                <div class="card blue-grey darken-1">
+                <div class="card small blue-grey darken-1">
                     <div class="card-content white-text">
                         <h6 class="card-title">{{ $ctrl.product.name }}</h6>
                         <p>{{ $ctrl.product.description }}</p>
@@ -34,10 +34,10 @@
         }
 
         $onInit() {
-            this.product = this.productList.getProductByIndex(this.productId);
+            this.product = this.productList.getProductByIndex(this.productIndex);
         }
     }
 
     angular.module('shop')
         .component('product', new ProductComponent);
-}(window, document));
+}());

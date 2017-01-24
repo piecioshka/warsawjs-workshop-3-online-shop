@@ -74,16 +74,18 @@ $ npm run start:mock-server
 
 ## TODO LIST
 
-* Prezentacja listy produktów
-    - Paginacja
-    - Filtrowanie
-* Pobieranie listy produktów
-    - Uruchomienie serwera do pobierania danych
-* Routing
-* Dodawanie produktów do koszyka
-* Usuwanie produktów z koszyka
-* Wyszukiwarka
-* Obsługa błędów
+* [x] Prezentacja listy produktów
+* [x] Uruchomienie serwera do pobierania danych
+* [x] Pobieranie listy produktów
+* [x] Prezentacja zawartości koszyka
+* [x] Dodawanie produktów do koszyka
+* [x] Czyszczenie produktów z koszyka
+* [ ] Obsługa błędów w sytuacji problemu z pobraniem listy produktów
+* [ ] Usuwanie produktów z koszyka pojedynczo
+* [ ] Wyszukiwarka produktów
+* [ ] Filtrowanie listy produktów
+* [ ] Paginacja listy produktów
+* [ ] Routing
 
 ## Zadania dodatkowe
 
@@ -92,6 +94,7 @@ $ npm run start:mock-server
 
 ## Przydatne linki
 
+* http://materializecss.com/
 * https://cdnjs.com/
 * https://angularjs.org/
 

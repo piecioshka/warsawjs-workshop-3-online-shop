@@ -1,50 +1,61 @@
-(function (window, document, undefined) {
+(function () {
     'use strict';
 
     class ProductAddToCartComponent {
         constructor() {
+            this.require = {
+                parent: '^^product'
+            };
             this.controller = ProductAddToCartComponentController;
         }
 
         template() {
             return `
-                <div class="row">
-                    <span class="col s6 white-text">
-                        Dodaj do koszyka
-                    </span>
-                    <label class="col s2">
-                        <input
-                            type="number"
-                            value="0"
-                            />
-                    </label>
+                <form 
+                    class="row"
+                    ng-submit="$ctrl.onSubmitHandler()"
+                    >
                     <input
-                        class="col s2 btn"
                         type="submit"
-                        ng-click="$ctrl.basket.add(this.product)"
-                        value="+"
-                        />
+                        class="col s8 left btn white-text"
+                        value="Do koszyka"
+                    />
                     <input
-                        class="col s2 btn"
-                        type="submit"
-                        ng-click="$ctrl.basket.add(this.product)"
-                        value="-"
-                        />
-                </div>
+                        type="text"
+                        max="9"
+                        min="0"
+                        class="col s3 right blue-grey lighten-5 black center-align"
+                        ng-model="$ctrl.quantity"
+                        ng-blur="$ctrl.onBlurHandler()"
+                        required
+                    />
+                </form>
                 `;
         }
     }
 
     class ProductAddToCartComponentController {
-        constructor() {
+        constructor(CartService) {
             // console.debug('new ProductAddToCartComponentController');
+            this.quantity = 1;
+            this.CartService = CartService;
         }
 
-        $onInit() {
+        onBlurHandler() {
+            if (this.quantity > 9) {
+                this.quantity = 9;
+            }
 
+            if (this.quantity < 1) {
+                this.quantity = 1;
+            }
+        }
+
+        onSubmitHandler() {
+            this.CartService.appendCart(this.parent.product, this.quantity);
         }
     }
 
     angular.module('shop')
         .component('productAddToCart', new ProductAddToCartComponent);
-}(window, document));
+}());

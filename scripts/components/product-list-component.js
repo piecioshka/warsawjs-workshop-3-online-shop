@@ -1,4 +1,4 @@
-(function (window, document, undefined) {
+(function () {
     'use strict';
 
     class ProductListComponent {
@@ -14,7 +14,7 @@
                     ng-repeat="product in $ctrl.products track by $index">
                     <product
                         class="row" 
-                        data-product-id="$index"></product>
+                        data-product-index="$index"></product>
                 </div>
             `;
         }
@@ -41,4 +41,4 @@
 
     angular.module('shop')
         .component('productList', new ProductListComponent);
-}(window, document));
+}());

@@ -1,4 +1,4 @@
-(function (window, document, undefined) {
+(function () {
     'use strict';
 
     class PageFooter {
@@ -13,4 +13,4 @@
 
     angular.module('shop')
         .component('pageFooter', new PageFooter);
-}(window, document));
+}());

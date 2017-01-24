@@ -1,8 +1,8 @@
-(function (window, document, undefined) {
+(function () {
     'use strict';
 
     angular.module('shop', [])
         .config(function ($compileProvider) {
             // $compileProvider.debugInfoEnabled(false);
         });
-}(window, document));
+}());

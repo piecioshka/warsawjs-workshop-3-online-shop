@@ -1,4 +1,4 @@
-(function (window, document, undefined) {
+(function () {
     'use strict';
 
     angular.module('shop')
@@ -11,4 +11,4 @@
                 }
             };
         })
-}(window, document));
+}());

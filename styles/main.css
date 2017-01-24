@@ -1,0 +1,26 @@
+header .brand-logo {
+    margin: 0 0 0 20px;
+}
+
+header #cart-dropdown-list {
+    width: 300px;
+}
+
+header li ul#cart-dropdown-list {
+    transition: 0.2s all;
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+
+header li:hover ul#cart-dropdown-list {
+    display: block;
+    opacity: 1;
+}
+
+/* -------------------------------------------------------------------------- */
+
+product-add-to-cart .row,
+product-add-to-cart input[type="text"] {
+    margin: 0;
+}
