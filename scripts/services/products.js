@@ -1,10 +1,10 @@
 (function () {
     'use strict';
 
+    const URL = 'http://localhost:2095/products';
+
     angular.module('shop')
         .factory('ProductsService', function ($http) {
-            const URL = 'http://localhost:3000/products';
-
             return {
                 $get() {
                     return $http.get(URL);

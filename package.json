@@ -4,7 +4,7 @@
     "version": "0.0.0",
     "scripts": {
         "build:mock": "node data/products.js",
-        "start:mock-server": "json-server data/products.json"
+        "start:mock-server": "json-server data/products.json --port 2095"
     },
     "devDependencies": {
         "json-schema-faker": "0.4.0"
