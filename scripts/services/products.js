@@ -1,7 +1,8 @@
-(function () {
+(function (window) {
     'use strict';
 
-    const URL = 'http://localhost:2095/products';
+    const HOST = window.location.host;
+    const URL = `http://${HOST}:2095/products`;
 
     angular.module('shop')
         .factory('ProductsService', function ($http) {
@@ -11,4 +12,4 @@
                 }
             };
         })
-}());
+}(window));

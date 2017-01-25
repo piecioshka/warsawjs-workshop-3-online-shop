@@ -7,6 +7,7 @@
 ## Jak uruchomić?
 
 ```
+$ npm install
 $ npm run build:mock
 $ npm run start:mock-server
 ```
@@ -16,7 +17,6 @@ $ npm run start:mock-server
 * Angular v1.6.1
 * Zainstalowany Node.js v7+
 * Paczki zainstalowane globalnie:
-    - `json-server`
     - `http-server`
 
 ## O czym opowiedzieć?
@@ -80,6 +80,8 @@ $ npm run start:mock-server
 * [x] Prezentacja zawartości koszyka
 * [x] Dodawanie produktów do koszyka
 * [x] Czyszczenie produktów z koszyka
+* [x] Zapisywanie stanu koszyka w `localStorage`
+* [x] Odczytywanie stanu koszyka z `localStorage`
 * [ ] Obsługa błędów w sytuacji problemu z pobraniem listy produktów
 * [ ] Usuwanie produktów z koszyka pojedynczo
 * [ ] Wyszukiwarka produktów
