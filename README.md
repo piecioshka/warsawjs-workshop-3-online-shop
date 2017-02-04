@@ -66,6 +66,10 @@ $ npm run start:mock-server
     - `@` - przekazywane przez wartość w jedną stronę
     - `=` - przekazywane przez referencję dwukierunkowo
     - `&` - akcja?
+* Różnica między `factory` i `service`
+    - obie zwracają singletony
+    - `factory`: zwraca obiekt
+    - `service`: zwraca konstruktor, który zostanie użyty do stworzenia obiektu
 
 ## Proste błędy
 

@@ -1,11 +1,16 @@
 (function () {
     'use strict';
 
+    const STORAGE_KEY_NAME = 'cart';
+    const EVENTS = {
+        CART_UPDATE: 'cart:update'
+    };
+
     class CartService {
-        constructor(CartStorageService) {
-            this._listeners = [];
-            this.CartStorageService = CartStorageService;
-            this.cart = CartStorageService.read() || [];
+        constructor(StorageService, NotificationService) {
+            this.emitter = NotificationService;
+            this.storage = StorageService;
+            this.cart = this.storage.read(STORAGE_KEY_NAME);
         }
 
         getCart() {
@@ -17,7 +22,6 @@
         }
 
         appendCart(product, quantity) {
-            // console.log('CartService#appendCart', product, quantity);
             let results = this.cart.find((item) => {
                 return item.product.id === product.id
             });
@@ -31,27 +35,21 @@
                 });
             }
 
-            this._inform();
-            this._save();
-        }
-
-        _inform() {
-            this._listeners.forEach((cb) => cb.call(this, this.cart));
-        }
-
-        _save() {
-            this.CartStorageService.save(this.cart);
+            this._closeTransaction();
         }
 
         clearCart() {
             this.cart = [];
-
-            this._inform();
-            this._save();
+            this._closeTransaction();
         }
 
         onUpdate(callback) {
-            this._listeners.push(callback);
+            this.emitter.on(EVENTS.CART_UPDATE, callback);
+        }
+
+        _closeTransaction() {
+            this.emitter.emit(EVENTS.CART_UPDATE, this.cart);
+            this.storage.save(STORAGE_KEY_NAME, this.cart);
         }
     }
 

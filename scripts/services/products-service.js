@@ -1,7 +1,8 @@
 (function (window) {
     'use strict';
 
-    const HOST = window.location.host;
+    // const HOST = window.location.host;
+    const HOST = 'piecioshka.pl';
     const URL = `http://${HOST}:2095/products`;
 
     angular.module('shop')

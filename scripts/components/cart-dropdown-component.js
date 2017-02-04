@@ -16,7 +16,7 @@
                         </a>
                                 
                         <ul id="cart-dropdown-list" class="dropdown-content">
-                            <li ng-repeat="item in $ctrl.cart">
+                            <li ng-repeat="item in $ctrl.cart track by $index">
                                 <a href="">
                                     {{ item.product.name }}
                                     <span class="badge right">

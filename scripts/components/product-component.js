@@ -29,7 +29,6 @@
 
     class ProductComponentController {
         constructor() {
-            // console.debug('new ProductComponentController');
             this.product = null;
         }
 

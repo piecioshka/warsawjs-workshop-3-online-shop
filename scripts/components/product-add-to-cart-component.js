@@ -36,7 +36,6 @@
 
     class ProductAddToCartComponentController {
         constructor(CartService) {
-            // console.debug('new ProductAddToCartComponentController');
             this.quantity = 1;
             this.CartService = CartService;
         }

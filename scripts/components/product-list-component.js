@@ -22,7 +22,6 @@
 
     class ProductListComponentController {
         constructor(ProductsService) {
-            // console.debug('new ProductListComponentController');
             this.products = [];
             this.ProductsService = ProductsService;
         }
