@@ -1,42 +1,38 @@
 (function () {
     'use strict';
 
+    const TEMPLATE = `
+        <ul class="right">
+            <li>
+                <a class="dropdown-button" href="">
+                    Koszyk ({{ $ctrl.getCartSize() }})
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
+                        
+                <ul id="cart-dropdown-list" class="dropdown-content">
+                    <li ng-repeat="item in $ctrl.cart track by $index">
+                        <a href="">
+                            {{ item.product.name }}
+                            <span class="badge right">
+                                {{ item.quantity }}x
+                            </span>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="" ng-click="$ctrl.clearCart()">
+                            Wyczyść koszyk
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    `;
+
     class CartDropdown {
         constructor() {
             this.controller = CartDropdownController;
-        }
-
-        template() {
-            return `
-                <ul class="right">
-                    <li>
-                        <a class="dropdown-button" href="">
-                            Koszyk ({{ $ctrl.getCartSize() }})
-                            <i class="material-icons right">arrow_drop_down</i>
-                        </a>
-                                
-                        <ul id="cart-dropdown-list" class="dropdown-content">
-                            <li ng-repeat="item in $ctrl.cart track by $index">
-                                <a href="">
-                                    {{ item.product.name }}
-                                    <span class="badge right">
-                                        {{ item.quantity }}x
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a 
-                                        href=""
-                                        ng-click="$ctrl.clearCart()"
-                                    >
-                                    Wyczyść koszyk
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            `;
+            this.template = TEMPLATE;
         }
     }
 
@@ -60,5 +56,5 @@
     }
 
     angular.module('shop')
-        .component('cartDropdown', new CartDropdown)
+        .component('cartDropdown', new CartDropdown);
 }());

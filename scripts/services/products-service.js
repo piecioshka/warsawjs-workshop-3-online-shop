@@ -5,12 +5,14 @@
     // const HOST = 'piecioshka.pl';
     const URL = `http://${HOST}:2095/products`;
 
+    function ProductsService($http) {
+        return {
+            $get() {
+                return $http.get(URL);
+            }
+        };
+    }
+
     angular.module('shop')
-        .factory('ProductsService', function ($http) {
-            return {
-                $get() {
-                    return $http.get(URL);
-                }
-            };
-        })
+        .factory('ProductsService', ProductsService);
 }(window));

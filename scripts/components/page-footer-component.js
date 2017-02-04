@@ -1,13 +1,15 @@
 (function () {
     'use strict';
 
+    const TEMPLATE = `
+        <footer class="row center-align">
+            <h5>&copy; 2017 Copyright</h5>
+        </footer>
+    `;
+
     class PageFooter {
-        template() {
-            return `
-                <footer class="row center-align">
-                    <h5>&copy; 2017 Copyright</h5>
-                </footer>
-            `;
+        constructor() {
+            this.template = TEMPLATE;
         }
     }
 

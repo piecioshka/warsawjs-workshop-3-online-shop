@@ -1,4 +1,4 @@
-# warsawjs-workshop-3-shop-online
+# warsawjs-workshop-3-online-shop
 
 > Aplikacja testowa stworzona na potrzeby WarsawJS Workshop #3
 
@@ -15,17 +15,18 @@ $ npm run start:mock-server
 ## Wymagania
 
 * Angular v1.6.1
-* Zainstalowany Node.js v7+
-* Paczki zainstalowane globalnie:
-    - `http-server`
+* Node.js v7+
 
 ## O czym opowiedzieć?
 
 * Wykorzystanie komponentów zamiast dyrektyw
 * Definicja dyrektywy vs definicja komponentu
+    * Typy dyrektyw: element, atrybut (pomijamy klasy i komentarze)
 * Każdy komponent posiada domyślnie izolowany `scope`
 * Tworzenie komponentów (skróconej wersji dyrektyw) podobnej jak w Angular 2
 * Alias definicji kontrolera we właściwości `controller: FooCtrl as foo`
+* Nie trzeba używać już `controllerAs`, domyślnie obiekt kontrolera jest 
+dostępny w szablonie jako `$ctrl` (v1.5)
 * Właściwość `bindings` jako skrót od `bindToController`
     - nazwa atrybut dyrektywy może być inna niż wewnętrzna nazwa właściwości
 * Jednokierunkowe przypisanie `<`, dwukierunkowe `=` (w `bindings`)
@@ -39,12 +40,9 @@ $ npm run start:mock-server
     (powiększonej tylko o jeden element).
     * Jednorazowe przypisanie (wyklucza z listy `$watchers`)
     * Wykorzystanie `ng-model-options` z v1.3, np. `debounce` przy wyszukiwarce
-    * Skorzystanie z `$rollbackViewValue` wycofanie zmian z modelu
-    * Walidacja z użyciem `ngModel.$validators`
     * Jawne przekazanie obiektów podczas Dependency Injection tj.
         `SomeController.$inject = ['$http', '$timeout];`
     * Użycie dyrektywy `ng-bind` zamiast interpolacji (bez parsowania)
-    * Ustawienie w konfiguracji modułu `$httpProvider.userApplyAsync(true)`
     * Usunięcie informacji developerskich
         `$compileProvider.debugInfoEnabled(false)`
         - nie dodaje klas CSS do DOMa
@@ -61,7 +59,6 @@ $ npm run start:mock-server
     komponentów-rodziców
     - od wersji v1.5.6 nie trzeba podawać nazwy komponentu jeśli jest 
     zdefiniowany klucz
-* Typy dyrektyw: element, atrybut (pomijamy klasy i komentarze)
 * Przekazywanie parametrów do komponentów i dyrektyw:
     - `@` - przekazywane przez wartość w jedną stronę
     - `=` - przekazywane przez referencję dwukierunkowo
@@ -120,3 +117,4 @@ $ npm run start:mock-server
 * https://toddmotto.com/directive-to-directive-communication-with-require (v1.4 - tabs)
 * https://toddmotto.com/stateless-angular-components (v1.5.0-rc.0)
 * https://toddmotto.com/a-better-way-to-scope-angular-extend-no-more-vm-this/
+* http://bguiz.github.io/js-standards/angularjs/

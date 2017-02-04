@@ -1,36 +1,35 @@
 (function () {
     'use strict';
 
+    const TEMPLATE = `
+        <form 
+            class="row"
+            ng-submit="$ctrl.onSubmitHandler()"
+            >
+            <input
+                type="submit"
+                class="col s8 left btn white-text"
+                value="Do koszyka"
+            />
+            <input
+                type="text"
+                max="9"
+                min="0"
+                class="col s3 right blue-grey lighten-5 black center-align"
+                ng-model="$ctrl.quantity"
+                ng-blur="$ctrl.onBlurHandler()"
+                required
+            />
+        </form>
+    `;
+
     class ProductAddToCartComponent {
         constructor() {
             this.require = {
                 parent: '^^product'
             };
             this.controller = ProductAddToCartComponentController;
-        }
-
-        template() {
-            return `
-                <form 
-                    class="row"
-                    ng-submit="$ctrl.onSubmitHandler()"
-                    >
-                    <input
-                        type="submit"
-                        class="col s8 left btn white-text"
-                        value="Do koszyka"
-                    />
-                    <input
-                        type="text"
-                        max="9"
-                        min="0"
-                        class="col s3 right blue-grey lighten-5 black center-align"
-                        ng-model="$ctrl.quantity"
-                        ng-blur="$ctrl.onBlurHandler()"
-                        required
-                    />
-                </form>
-                `;
+            this.template = TEMPLATE;
         }
     }
 

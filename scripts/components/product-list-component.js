@@ -1,22 +1,21 @@
 (function () {
     'use strict';
 
+    const TEMPLATE = `
+        <div
+            class="col l4"
+            ng-repeat="product in $ctrl.products track by $index">
+            <product
+                class="row" 
+                data-product-index="$index"></product>
+        </div>
+    `;
+
     class ProductListComponent {
         constructor() {
             this.bindings = {};
             this.controller = ProductListComponentController;
-        }
-
-        template() {
-            return `
-                <div
-                    class="col l4"
-                    ng-repeat="product in $ctrl.products track by $index">
-                    <product
-                        class="row" 
-                        data-product-index="$index"></product>
-                </div>
-            `;
+            this.template = TEMPLATE;
         }
     }
 
