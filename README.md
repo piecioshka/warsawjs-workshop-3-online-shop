@@ -119,3 +119,4 @@ $ npm run start:mock-server
 * https://toddmotto.com/angular-1-5-lifecycle-hooks (v1.5 - tabs)
 * https://toddmotto.com/directive-to-directive-communication-with-require (v1.4 - tabs)
 * https://toddmotto.com/stateless-angular-components (v1.5.0-rc.0)
+* https://toddmotto.com/a-better-way-to-scope-angular-extend-no-more-vm-this/

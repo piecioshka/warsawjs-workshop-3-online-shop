@@ -31,6 +31,14 @@ header li:hover ul#cart-dropdown-list {
 
 /* -------------------------------------------------------------------------- */
 
+product .card-content img {
+    margin: 0 10px 0 0;
+    width: 100px;
+    height: 100px;
+}
+
+/* -------------------------------------------------------------------------- */
+
 product-add-to-cart .row,
 product-add-to-cart input[type="text"] {
     margin: 0;

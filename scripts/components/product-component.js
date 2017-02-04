@@ -17,6 +17,9 @@
                 <div class="card small blue-grey darken-1">
                     <div class="card-content white-text">
                         <h6 class="card-title">{{ $ctrl.product.name }}</h6>
+                        <img
+                            class="circle left"
+                            ng-src="{{ $ctrl.product.image }}" alt=""/>
                         <p>{{ $ctrl.product.description }}</p>
                     </div>
                     <div class="card-action">

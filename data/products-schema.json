@@ -35,9 +35,13 @@
                     },
                     "image": {
                         "chance": {
-                            "avatar": {
-                                "protocol": "https",
-                                "fileExtension": "jpg"
+                            "url": {
+                                "domain": "api.adorable.io/avatars/100",
+                                "extensions": [
+                                    "gif",
+                                    "jpg",
+                                    "png"
+                                ]
                             }
                         }
                     }

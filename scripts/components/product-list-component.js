@@ -10,7 +10,7 @@
         template() {
             return `
                 <div
-                    class="col s4"
+                    class="col l4"
                     ng-repeat="product in $ctrl.products track by $index">
                     <product
                         class="row" 
