@@ -25,15 +25,18 @@ $ npm run start:mock-server
 * Każdy komponent posiada domyślnie izolowany `scope`
 * Tworzenie komponentów (skróconej wersji dyrektyw) podobnej jak w Angular 2
 * Alias definicji kontrolera we właściwości `controller: FooCtrl as foo`
-* Nie trzeba używać już `controllerAs`, domyślnie obiekt kontrolera jest 
-dostępny w szablonie jako `$ctrl` (v1.5)
 * Właściwość `bindings` jako skrót od `bindToController`
     - nazwa atrybut dyrektywy może być inna niż wewnętrzna nazwa właściwości
 * Jednokierunkowe przypisanie `<`, dwukierunkowe `=` (w `bindings`)
 * Nowe w v1.5
+    * Nie trzeba używać już `controllerAs`, domyślnie obiekt kontrolera jest 
+    dostępny w szablonie jako `$ctrl`
     * Zamiast `compile` jest `$onInit` w kontrolerze komponentu 
     * Kontroler nie jest wymagany przybudowanie komponentów - mamy komponenty 
     bezstanowe - tak jak w React-cie.
+* Nowe w v1.6
+    * Usługa `$http` nie posiada już funkcji `success` i `error`, tylko 
+    `then` oraz `catch`.
 * Optymalizacje
     * Wykorzystać `track by` przy `ng-repeat`, bez tego każdy dodany element 
     do listy będzie powodował usunięcie obecnej listy i zbudowanie nowej 
@@ -84,8 +87,7 @@ dostępny w szablonie jako `$ctrl` (v1.5)
 * [x] Zapisywanie stanu koszyka w `localStorage`
 * [x] Odczytywanie stanu koszyka z `localStorage`
 * [ ] Obsługa błędów w sytuacji problemu z pobraniem listy produktów
-* [ ] Usuwanie produktów z koszyka pojedynczo
-* [ ] Wyszukiwarka produktów
+* [ ] Usuwanie pojedynczych produktów z koszyka
 * [ ] Filtrowanie listy produktów
 * [ ] Paginacja listy produktów
 * [ ] Routing
