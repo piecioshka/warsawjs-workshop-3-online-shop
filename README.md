@@ -117,7 +117,7 @@ do listy będzie powodował usunięcie obecnej listy i zbudowanie nowej
 * http://chancejs.com/
 * https://github.com/marak/Faker.js/
 
-### Angular.js
+### Todd Motto blog
 
 * https://toddmotto.com/angular-1-6-is-here (v1.6)
 * https://toddmotto.com/exploring-the-angular-1-5-component-method (v1.5)
@@ -126,10 +126,10 @@ do listy będzie powodował usunięcie obecnej listy i zbudowanie nowej
 * https://toddmotto.com/directive-to-directive-communication-with-require (v1.4 - tabs)
 * https://toddmotto.com/stateless-angular-components (v1.5.0-rc.0)
 * https://toddmotto.com/a-better-way-to-scope-angular-extend-no-more-vm-this/
-* http://bguiz.github.io/js-standards/angularjs/
 
 ## Misc
 
+* http://bguiz.github.io/js-standards/angularjs/
 * https://www.binpress.com/tutorial/speeding-up-angular-js-with-simple-optimizations/135
 * http://www.panda-os.com/blog/2015/01/angularjs-apply-digest-and-evalasync/
 * https://www.superdesk.org/en/site/news/46/AngularJS-performance-tips.htm
