@@ -7,7 +7,7 @@
                 let data = window.localStorage.getItem(name);
 
                 try {
-                    return JSON.parse(data);
+                    return JSON.parse(data) || [];
                 } catch (err) {
                     console.warn(err);
                     return [];

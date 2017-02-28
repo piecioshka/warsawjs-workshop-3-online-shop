@@ -93,7 +93,7 @@ do listy będzie powodował usunięcie obecnej listy i zbudowanie nowej
 * [x] Czyszczenie produktów z koszyka
 * [x] Zapisywanie stanu koszyka w `localStorage`
 * [x] Odczytywanie stanu koszyka z `localStorage`
-* [ ] Obsługa błędów w sytuacji problemu z pobraniem listy produktów
+* [x] Obsługa błędów w sytuacji problemu z pobraniem listy produktów
 * [ ] Usuwanie pojedynczych produktów z koszyka
 * [ ] Filtrowanie listy produktów
 * [ ] Paginacja listy produktów
