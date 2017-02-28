@@ -127,3 +127,9 @@ do listy będzie powodował usunięcie obecnej listy i zbudowanie nowej
 * https://toddmotto.com/stateless-angular-components (v1.5.0-rc.0)
 * https://toddmotto.com/a-better-way-to-scope-angular-extend-no-more-vm-this/
 * http://bguiz.github.io/js-standards/angularjs/
+
+## Misc
+
+* https://www.binpress.com/tutorial/speeding-up-angular-js-with-simple-optimizations/135
+* http://www.panda-os.com/blog/2015/01/angularjs-apply-digest-and-evalasync/
+* https://www.superdesk.org/en/site/news/46/AngularJS-performance-tips.htm
