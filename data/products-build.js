@@ -1,9 +1,12 @@
 'use strict';
 
-let jsf = require('json-schema-faker');
-let schema = require('./products-schema.json');
-let sample = jsf(schema);
-let fs = require('fs');
-let path = require('path');
-let filename = path.resolve(__dirname, 'products.json');
+const jsf = require('json-schema-faker');
+jsf.extend('faker', function () {
+    return require('faker');
+});
+const schema = require('./products-schema.json');
+const sample = jsf(schema);
+const fs = require('fs');
+const path = require('path');
+const filename = path.resolve(__dirname, 'products.json');
 fs.writeFileSync(filename, JSON.stringify(sample, null, 4));

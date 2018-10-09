@@ -1,15 +1,15 @@
 # warsawjs-workshop-3-online-shop
 
-> Aplikacja stworzona na potrzeby WarsawJS Workshop #3
+Aplikacja stworzona na potrzeby WarsawJS Workshop #3
 
 ![](http://warsawjs.com/assets/images/logo/logo-transparent-240x240.png)
 
 ## Jak uruchomić?
 
-```
-$ npm install
-$ npm run build:mock
-$ npm run start:mock-server
+```bash
+npm install
+npm run build:mock
+npm run start:mock-server
 ```
 
 ## Wymagania
@@ -23,44 +23,44 @@ $ npm run start:mock-server
 
 * Wykorzystanie komponentów zamiast dyrektyw
 * Definicja dyrektywy vs definicja komponentu
-    * Typy dyrektyw: element, atrybut (pomijamy klasy i komentarze)
-    * Różnice we właściwościach: https://docs.angularjs.org/guide/component#comparison-between-directive-definition-and-component-definition
+    + Typy dyrektyw: element, atrybut (pomijamy klasy i komentarze)
+    + Różnice we właściwościach: https://docs.angularjs.org/guide/component#comparison-between-directive-definition-and-component-definition
 * Każdy komponent posiada domyślnie izolowany `scope`
 * Tworzenie komponentów (skróconej wersji dyrektyw) podobne jak w Angular 2
 * Alias definicji kontrolera we właściwości `controller: FooCtrl as foo`
 * Właściwość `bindings` jako skrót od `bindToController`
-    - nazwa atrybut dyrektywy może być inna niż wewnętrzna nazwa właściwości
+    + nazwa atrybut dyrektywy może być inna niż wewnętrzna nazwa właściwości
 * Zależności komponentów poprzez wykorzystanie właściwości `require` w `$onInit`
-    - w komponentach (v1.5) jest obiektem
-    - w dyrektywach (v1.4) jest stringiem albo tablicą (i wtedy odwołanie 
+    + w komponentach (v1.5) jest obiektem
+    + w dyrektywach (v1.4) jest stringiem albo tablicą (i wtedy odwołanie 
     poprzez `$ctrl[0]`)
-    - `^^` wyszukuję komponentów-rodziców
-    - `^` na początku przeszukuje element, a potem wyszukuje
+    + `^^` wyszukuję komponentów-rodziców
+    + `^` na początku przeszukuje element, a potem wyszukuje
     komponentów-rodziców
-    - od wersji v1.5.6 nie trzeba podawać nazwy komponentu jeśli jest 
+    + od wersji v1.5.6 nie trzeba podawać nazwy komponentu jeśli jest 
     zdefiniowany klucz
 * Przekazywanie parametrów do komponentów i dyrektyw (w `bindings`)
-    - `<` - przekazywane przez wartość w jedną stronę (v1.5)
-    - `@` - przekazywane przez wartość w jedną stronę (v1.5) wraz z 
+    + `<` - przekazywane przez wartość w jedną stronę (v1.5)
+    + `@` - przekazywane przez wartość w jedną stronę (v1.5) wraz z 
     interpolacją wartości atrybutu DOM
-    - `=` - przekazywane przez referencję dwukierunkowo
-    - `&` - akcja?
+    + `=` - przekazywane przez referencję dwukierunkowo
+    + `&` - akcja?
 * Nowe w v1.5
-    * Nie trzeba używać już `controllerAs`, domyślnie obiekt kontrolera jest 
+    + Nie trzeba używać już `controllerAs`, domyślnie obiekt kontrolera jest 
     dostępny w szablonie jako `$ctrl`
-    * Zamiast `compile` jest `$onInit` w kontrolerze komponentu 
-    * Kontroler nie jest wymagany przybudowanie komponentów - mamy komponenty 
+    + Zamiast `compile` jest `$onInit` w kontrolerze komponentu 
+    + Kontroler nie jest wymagany przybudowanie komponentów - mamy komponenty 
     bezstanowe - tak jak w React-cie.
 
 ### Usługi
 
 * Nowe w v1.6
-    * Usługa `$http` nie posiada już funkcji `success` i `error`, tylko 
+    + Usługa `$http` nie posiada już funkcji `success` i `error`, tylko 
     `then` oraz `catch`.
 * Różnica między `factory` i `service`
-    - obie zwracają singletony
-    - `factory`: zwraca obiekt
-    - `service`: zwraca konstruktor, który zostanie użyty do stworzenia obiektu
+    + obie zwracają singletony
+    + `factory`: zwraca obiekt
+    + `service`: zwraca konstruktor, który zostanie użyty do stworzenia obiektu
 
 ### Inne
 
@@ -69,9 +69,9 @@ $ npm run start:mock-server
 
 ### Optymalizacje
 
-* Wykorzystać `track by` przy `ng-repeat`, bez tego każdy dodany element 
-do listy będzie powodował usunięcie obecnej listy i zbudowanie nowej 
-(powiększonej tylko o jeden element).
+* Wykorzystać `track by` przy `ng-repeat`, bez tego każdy dodany element
+    do listy będzie powodował usunięcie obecnej listy i zbudowanie nowej
+    (powiększonej tylko o jeden element).
 * Jednorazowe przypisanie (wyklucza z listy `$watchers`)
 * Wykorzystanie `ng-model-options` z v1.3, np. `debounce` przy wyszukiwarce
 * Jawne przekazanie obiektów podczas Dependency Injection tj.
@@ -79,8 +79,8 @@ do listy będzie powodował usunięcie obecnej listy i zbudowanie nowej
 * Użycie dyrektywy `ng-bind` zamiast interpolacji (bez parsowania)
 * Usunięcie informacji developerskich
     `$compileProvider.debugInfoEnabled(false)`
-    - nie dodaje klas CSS do DOMa
-    - jeśli zaistnieje potrzeba to uruchom `angular.reloadWithDebugInfo()`
+    + nie dodaje klas CSS do DOMa
+    + jeśli zaistnieje potrzeba to uruchom `angular.reloadWithDebugInfo()`
 * Nie używanie filtrów w DOMie - lepiej wykorzysta `$filter` w kontrolerze
 
 ## TODO LIST

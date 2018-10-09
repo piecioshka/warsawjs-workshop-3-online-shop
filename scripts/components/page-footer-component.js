@@ -3,7 +3,7 @@
 
     const TEMPLATE = `
         <footer class="row center-align">
-            <h6 class="grey-text lighten-5">&copy; 2017 Copyright</h6>
+            <h6 class="grey-text lighten-5">Copyright &copy; 2017</h6>
         </footer>
     `;
 

@@ -8,7 +8,7 @@
                     Koszyk ({{ $ctrl.getCartSize() }})
                     <i class="material-icons right">arrow_drop_down</i>
                 </a>
-                        
+
                 <ul id="cart-dropdown-list" class="dropdown-content">
                     <li ng-repeat="item in $ctrl.cart track by $index">
                         <a href="">

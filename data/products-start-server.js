@@ -1,10 +1,10 @@
 const PATH = 'data/products.json';
 const PORT = 2095;
 
-let jsonServer = require('json-server');
-let server = jsonServer.create();
-let router = jsonServer.router(PATH);
-let middlewares = jsonServer.defaults();
+const jsonServer = require('json-server');
+const server = jsonServer.create();
+const router = jsonServer.router(PATH);
+const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 server.use(router);
