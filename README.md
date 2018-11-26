@@ -2,7 +2,7 @@
 
 Aplikacja stworzona na potrzeby WarsawJS Workshop #3
 
-![](http://warsawjs.com/assets/images/logo/logo-transparent-240x240.png)
+<img src="https://warsawjs.com/static/images/logos/logo-warsawjs.svg" width="400" height="400" alt=""/>
 
 ## Jak uruchomić?
 
@@ -14,7 +14,7 @@ npm run start:mock-server
 
 ## Wymagania
 
-* Angular v1.6.1
+* Angular.js v1.6.1
 * Node.js v7+
 
 ## O czym opowiedzieć?
@@ -32,30 +32,30 @@ npm run start:mock-server
     + nazwa atrybut dyrektywy może być inna niż wewnętrzna nazwa właściwości
 * Zależności komponentów poprzez wykorzystanie właściwości `require` w `$onInit`
     + w komponentach (v1.5) jest obiektem
-    + w dyrektywach (v1.4) jest stringiem albo tablicą (i wtedy odwołanie 
+    + w dyrektywach (v1.4) jest stringiem albo tablicą (i wtedy odwołanie
     poprzez `$ctrl[0]`)
     + `^^` wyszukuję komponentów-rodziców
     + `^` na początku przeszukuje element, a potem wyszukuje
     komponentów-rodziców
-    + od wersji v1.5.6 nie trzeba podawać nazwy komponentu jeśli jest 
+    + od wersji v1.5.6 nie trzeba podawać nazwy komponentu jeśli jest
     zdefiniowany klucz
 * Przekazywanie parametrów do komponentów i dyrektyw (w `bindings`)
     + `<` - przekazywane przez wartość w jedną stronę (v1.5)
-    + `@` - przekazywane przez wartość w jedną stronę (v1.5) wraz z 
+    + `@` - przekazywane przez wartość w jedną stronę (v1.5) wraz z
     interpolacją wartości atrybutu DOM
     + `=` - przekazywane przez referencję dwukierunkowo
     + `&` - akcja?
 * Nowe w v1.5
-    + Nie trzeba używać już `controllerAs`, domyślnie obiekt kontrolera jest 
+    + Nie trzeba używać już `controllerAs`, domyślnie obiekt kontrolera jest
     dostępny w szablonie jako `$ctrl`
-    + Zamiast `compile` jest `$onInit` w kontrolerze komponentu 
-    + Kontroler nie jest wymagany przybudowanie komponentów - mamy komponenty 
+    + Zamiast `compile` jest `$onInit` w kontrolerze komponentu
+    + Kontroler nie jest wymagany przybudowanie komponentów - mamy komponenty
     bezstanowe - tak jak w React-cie.
 
 ### Usługi
 
 * Nowe w v1.6
-    + Usługa `$http` nie posiada już funkcji `success` i `error`, tylko 
+    + Usługa `$http` nie posiada już funkcji `success` i `error`, tylko
     `then` oraz `catch`.
 * Różnica między `factory` i `service`
     + obie zwracają singletony
