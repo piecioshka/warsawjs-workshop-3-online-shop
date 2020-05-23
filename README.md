@@ -1,6 +1,6 @@
 # warsawjs-workshop-3-online-shop
 
-⛩️ WarsawJS Workshop #3 — Angular.js — Online shop
+⛩️ WarsawJS Workshop #3 — Angular.js
 
 ## Jak uruchomić?
 
