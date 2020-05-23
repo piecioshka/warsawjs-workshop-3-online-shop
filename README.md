@@ -1,8 +1,6 @@
 # warsawjs-workshop-3-online-shop
 
-Aplikacja stworzona na potrzeby WarsawJS Workshop #3
-
-<img src="https://warsawjs.com/static/images/logos/logo-warsawjs.svg" width="400" height="400" alt=""/>
+⛩️ WarsawJS Workshop #3 — Angular.js — Online shop
 
 ## Jak uruchomić?
 
