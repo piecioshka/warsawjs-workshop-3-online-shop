@@ -36,7 +36,7 @@
                     "image": {
                         "chance": {
                             "url": {
-                                "domain": "api.adorable.io/avatars/100",
+                                "domain": "robohash.org",
                                 "extensions": [
                                     "gif",
                                     "jpg",
