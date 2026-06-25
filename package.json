@@ -2,6 +2,7 @@
     "private": true,
     "name": "warsawjs-workshop-3-online-shop",
     "version": "0.0.0",
+    "license": "MIT",
     "scripts": {
         "build:mock": "node data/products-build.js",
         "start:mock-server": "node data/products-start-server.js"

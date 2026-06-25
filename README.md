@@ -131,3 +131,7 @@ npm run start:mock-server
 * https://www.binpress.com/tutorial/speeding-up-angular-js-with-simple-optimizations/135
 * http://www.panda-os.com/blog/2015/01/angularjs-apply-digest-and-evalasync/
 * https://www.superdesk.org/en/site/news/46/AngularJS-performance-tips.htm
+
+## License
+
+[The MIT License](http://piecioshka.mit-license.org) @ 2026
